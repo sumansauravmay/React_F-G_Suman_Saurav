@@ -9,7 +9,6 @@ import {
   Stack,
   Grid,
   Button,
-  Heading,
   Text,
   InputLeftAddon,
   useColorModeValue,
@@ -54,7 +53,7 @@ export default function Feedback() {
         title: "Please check all input and checkbox",
         description: "One or more than one input is not filled",
         status: "error",
-        duration: 9000,
+        duration: 4000,
         isClosable: true,
       });
     } else if (!regex.test(inputData.email)) {
@@ -63,7 +62,7 @@ export default function Feedback() {
         title: "E-mail is wrong",
         description: "Please check the E-mail",
         status: "info",
-        duration: 9000,
+        duration: 4000,
         isClosable: true,
       });
     } else if (inputData.phone.length < 10 || inputData.phone.length > 10) {
@@ -72,9 +71,8 @@ export default function Feedback() {
         title: "Phone number is wrong",
         description: "Please check the phone number",
         status: "warning",
-        duration: 9000,
+        duration: 4000,
         isClosable: true,
-        
       });
     } else {
       arr.push(inputData);
@@ -98,9 +96,7 @@ export default function Feedback() {
       bg={useColorModeValue("gray.50", "gray.800")}
     >
       <Stack spacing={8} mx={"auto"} maxW={"lg"} py={12} px={6}>
-        <Stack
-        // align={"center"}
-        >
+        <Stack>
           <Text
             fontSize={"lg"}
             color={"gray.600"}

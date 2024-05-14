@@ -21,6 +21,13 @@ const SubmissionList = () => {
     window.location.reload();
   };
 
+  const handleDelete = (i) => {
+    arr.splice(i, 1);
+    localStorage.setItem("feedback", JSON.stringify(arr));
+    console.log(arr);
+    window.location.reload();
+  };
+
   return (
     <div>
       <Flex justifyContent={"space-evenly"} mt={50}>
@@ -103,7 +110,14 @@ const SubmissionList = () => {
                     <td>{feedback.beverage}</td>
                     <td>{feedback.clean}</td>
                     <td>{feedback.experience}</td>
-                    <td style={{ background: "red", color: "white" }}>
+                    <td
+                      style={{
+                        background: "red",
+                        color: "white",
+                        cursor: "pointer",
+                      }}
+                      onClick={() => handleDelete(feedback.email)}
+                    >
                       Delete
                     </td>
                   </tr>

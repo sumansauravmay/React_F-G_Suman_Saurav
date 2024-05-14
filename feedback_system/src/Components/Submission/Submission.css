@@ -1,25 +1,28 @@
-
-select,option{
-    font-size: 20px;
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 10px;
+select,
+option {
+  font-size: 20px;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 10px;
 }
-table,th,td{
-    text-align: center;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-   
+table,
+th,
+td {
+  text-align: center;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
-table{
-    border-collapse:collapse ;
-    width:98%;
-    margin: auto;
-    margin-top: 50px;
+table {
+  border-collapse: collapse;
+  width: 98%;
+  margin: auto;
+  margin-top: 50px;
 }
-th,td{
-    padding:15px;
+th,
+td {
+  padding: 15px;
 }
-tr>th{
-    background-color: teal;
-    color:white;
+tr > th {
+  background-color: teal;
+  color: white;
 }
