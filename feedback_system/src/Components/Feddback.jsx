@@ -62,16 +62,16 @@ export default function Feedback() {
         position: "top",
         title: "E-mail is wrong",
         description: "Please check the E-mail",
-        status: "error",
+        status: "info",
         duration: 9000,
         isClosable: true,
       });
     } else if (inputData.phone.length < 10 || inputData.phone.length > 10) {
       toast({
         position: "top",
-        title: "Phone is wrong",
+        title: "Phone number is wrong",
         description: "Please check the phone number",
-        status: "error",
+        status: "warning",
         duration: 9000,
         isClosable: true,
       });
@@ -286,7 +286,6 @@ export default function Feedback() {
 
           <Stack spacing={10} pt={2}>
             <Button
-              // loadingText="Submitting"
               size="lg"
               bg={"blue.400"}
               color={"white"}
