@@ -20,7 +20,6 @@ import { Radio, RadioGroup } from "@chakra-ui/react";
 import { useToast } from '@chakra-ui/react';
 import { useState } from "react";
 import React from "react";
-import Success from "./Successful";
 
 export default function Feedback() {
   const [value, setValue] = React.useState("");
@@ -76,6 +75,8 @@ export default function Feedback() {
     //   console.log("something went wrong");
     //   alert("Hi");
     // }
+
+    // window.location.reload();
   };
 
   return (
@@ -290,7 +291,7 @@ export default function Feedback() {
               marginTop={20}
               marginLeft={{lg:290, md:150, sm:130, base: 100}}
             >
-              Submit
+              Submit Review
             </Button>
           </Stack>
         </Box>

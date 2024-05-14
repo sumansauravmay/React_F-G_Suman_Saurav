@@ -1,17 +1,15 @@
 
 // import './App.css';
-import Feedback from "./Components/Feddback";
-import ExampleComponent from "./Components/Successful";
+import Allroutes from "./Components/Allroutes";
+// import Feedback from "./Components/Feddback";
 import Navbar from "./Components/Navbar";
-import Success from "./Components/Successful";
 
 
 function App() {
   return (
     <>
     <Navbar/>
-    <Feedback/>
-   
+    <Allroutes/>
     </>
   );
 }
