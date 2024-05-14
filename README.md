@@ -75,7 +75,6 @@ Here users can provide feedback based on experience.
 
 ### Footer Page -
  
- ![Footer page](https://i.postimg.cc/rwX0gfyG/footer.jpg)
 
 
 ### Video Link -
