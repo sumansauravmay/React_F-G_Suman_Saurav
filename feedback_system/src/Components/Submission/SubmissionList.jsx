@@ -1,8 +1,12 @@
 import React from "react";
 import "./Submission.css";
+import { Heading, Text } from "@chakra-ui/react";
 
 const SubmissionList = () => {
   let arr = JSON.parse(localStorage.getItem("feedback")) || [];
+
+
+
 
   return (
     <div>
@@ -19,8 +23,9 @@ const SubmissionList = () => {
               <th>Dining Experience</th>
             </tr>
           </thead>
-          <tbody>
-            {arr.map((feedback) => (
+          {/* <tbody> */}
+            {arr.length>0?arr.map((feedback) => (
+              <tbody>
               <tr key={feedback.name}>
                 <td>{feedback.name}</td>
                 <td>{feedback.email}</td>
@@ -30,8 +35,9 @@ const SubmissionList = () => {
                 <td>{feedback.clean}</td>
                 <td>{feedback.experience}</td>
               </tr>
-            ))}
-          </tbody>
+              </tbody>
+            )):<Text>No Feedback Submission Found!</Text>}
+         
         </table>
       </main>
     </div>
