@@ -36,6 +36,8 @@ export default function Feedback() {
   let arr = JSON.parse(localStorage.getItem("feedback")) || [];
 
   const onSubmitFunc = () => {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+
     console.log(inputData);
 
     if (
@@ -49,8 +51,26 @@ export default function Feedback() {
     ) {
       toast({
         position: "top",
-        title: "Something went wrong",
-        description: "Please check all input and checkbox",
+        title: "Please check all input and checkbox",
+        description: "One or more than one input is not filled",
+        status: "error",
+        duration: 9000,
+        isClosable: true,
+      });
+    } else if (!regex.test(inputData.email)) {
+      toast({
+        position: "top",
+        title: "E-mail is wrong",
+        description: "Please check the E-mail",
+        status: "error",
+        duration: 9000,
+        isClosable: true,
+      });
+    } else if (inputData.phone.length < 10 || inputData.phone.length > 10) {
+      toast({
+        position: "top",
+        title: "Phone is wrong",
+        description: "Please check the phone number",
         status: "error",
         duration: 9000,
         isClosable: true,
