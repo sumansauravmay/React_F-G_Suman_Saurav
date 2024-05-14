@@ -17,7 +17,7 @@ import {
 import ReactCountryFlag from "react-country-flag";
 import { IoIosArrowDown } from "react-icons/io";
 import { Radio, RadioGroup } from "@chakra-ui/react";
-import { useToast } from '@chakra-ui/react';
+import { useToast } from "@chakra-ui/react";
 import { useState } from "react";
 import React from "react";
 
@@ -27,56 +27,46 @@ export default function Feedback() {
   const [value3, setValue3] = React.useState("");
   const [value4, setValue4] = React.useState("");
   const [inputData, setInputData] = useState({});
-  const toast = useToast()
+  const toast = useToast();
 
   const handleChange = (e) => {
     setInputData({ ...inputData, [e.target.name]: e.target.value });
   };
 
-    let arr = JSON.parse(localStorage.getItem("feedback")) || [];
+  let arr = JSON.parse(localStorage.getItem("feedback")) || [];
 
   const onSubmitFunc = () => {
     console.log(inputData);
-    arr.push(inputData);
-    localStorage.setItem("feedback", JSON.stringify(arr));
 
-    toast({
-          position: 'top',
-          title: 'Thank you for providing the feedback',
-          description: "We will work towards improving your experience",
-          status: 'success',
-          duration: 9000,
-          isClosable: true,
-    })
-
-
-
-
-
-    // if (
-    //   inputData.name.length > 0 &&
-    //   inputData.email.length > 0 &&
-    //   inputData.phone.length > 0 &&
-    //   inputData.service.length > 0 &&
-    //   inputData.experience.length > 0 &&
-    //   inputData.clean.length > 0 &&
-    //   inputData.beverage.length > 0
-    // ) {
-    //   console.log(
-    //     inputData.name,
-    //     inputData.email,
-    //     inputData.phone,
-    //     inputData.service,
-    //     inputData.experience,
-    //     inputData.clean,
-    //     inputData.beverage
-    //   );
-    // } else {
-    //   console.log("something went wrong");
-    //   alert("Hi");
-    // }
-
-    // window.location.reload();
+    if (
+      !inputData.name ||
+      !inputData.email ||
+      !inputData.phone ||
+      !inputData.service ||
+      !inputData.experience ||
+      !inputData.clean ||
+      !inputData.beverage
+    ) {
+      toast({
+        position: "top",
+        title: "Something went wrong",
+        description: "Please check all input and checkbox",
+        status: "error",
+        duration: 9000,
+        isClosable: true,
+      });
+    } else {
+      arr.push(inputData);
+      localStorage.setItem("feedback", JSON.stringify(arr));
+      toast({
+        position: "top",
+        title: "Thank you for providing the feedback",
+        description: "We will work towards improving your experience",
+        status: "success",
+        duration: 9000,
+        isClosable: true,
+      });
+    }
   };
 
   return (
@@ -161,9 +151,6 @@ export default function Feedback() {
               </InputGroup>
             </FormControl>
           </Grid>
-
-
-
 
           <Grid
             spacing={4}
@@ -289,7 +276,7 @@ export default function Feedback() {
               onClick={onSubmitFunc}
               width={"30%"}
               marginTop={20}
-              marginLeft={{lg:290, md:150, sm:130, base: 100}}
+              marginLeft={{ lg: 290, md: 150, sm: 130, base: 100 }}
             >
               Submit Review
             </Button>

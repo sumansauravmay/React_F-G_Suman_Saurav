@@ -36,7 +36,7 @@ const SubmissionList = () => {
               border="1px solid gray"
               htmlSize={4}
               width={{ lg: "200px", md: "auto", sm: "auto", base: "auto" }}
-              placeholder="Search"
+              placeholder="Search by name"
               onChange={(e) => setSearchitem(e.target.value)}
             />
           </Box>
