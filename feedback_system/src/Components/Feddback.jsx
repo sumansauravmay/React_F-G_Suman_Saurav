@@ -74,6 +74,7 @@ export default function Feedback() {
         status: "warning",
         duration: 9000,
         isClosable: true,
+        
       });
     } else {
       arr.push(inputData);
