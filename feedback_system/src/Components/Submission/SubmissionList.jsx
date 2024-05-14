@@ -8,7 +8,6 @@ import {
   Text,
   Box,
   Button,
-  Container,
 } from "@chakra-ui/react";
 import { RepeatIcon } from "@chakra-ui/icons";
 import { Link } from "react-router-dom";

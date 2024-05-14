@@ -43,7 +43,7 @@ const Navbar = () => {
             color:"blue"
           }}
           >
-            <Link to="/">Feedback Form</Link>
+            <Link to="/">F&G Form</Link>
           </Text>
 
           <Text w={"120px"} cursor={"pointer"} mt={5}
@@ -51,7 +51,7 @@ const Navbar = () => {
             color:"blue"
           }}
           >
-            <Link to="/submisssion">All submission</Link>
+            <Link to="/submisssion">All Submission</Link>
           </Text>
 
           <Flex alignItems={"center"}>
