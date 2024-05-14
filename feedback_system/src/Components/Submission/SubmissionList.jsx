@@ -27,7 +27,7 @@ const SubmissionList = () => {
       <Flex justifyContent={"space-evenly"} mt={50}>
         <Stack direction={"column"}>
           <Heading>Aromatic Bar</Heading>
-          <Text>{arr.length} records founds</Text>
+          <Text>{arr.length} records founds.</Text>
         </Stack>
 
         <Stack direction={"row"}>
