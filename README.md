@@ -1,4 +1,4 @@
-# Senpiper_Feedback_System
+# Feedback Grievance System
 
 <h3 align="center">It's a feedback and the grievance system</h3>
 
