@@ -1,7 +1,7 @@
 import React from 'react';
 import {Route, Routes} from "react-router-dom";
 import Feedback from './Feddback';
-import SubmissionList from './SubmissionList';
+import SubmissionList from './Submission/SubmissionList';
 
 const Allroutes = () => {
   return (

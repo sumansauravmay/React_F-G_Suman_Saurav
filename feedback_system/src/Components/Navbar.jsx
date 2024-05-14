@@ -28,16 +28,23 @@ const Navbar = () => {
 
     return (
       <>
-        <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
-          <Flex h={16} alignItems={'center'} justifyContent={'space-around'}>
+        <Box 
+        // bg={useColorModeValue('gray.100', 'gray.900')} 
+        px={4}
+        // width={{lg:1530, md:1000, sm:850, base: 700}}
+        >
+          <Flex h={16} 
+          
+        
+           justifyContent={'space-around'}>
            
-            <Text w={"120px"} cursor={'pointer'}>
+            <Text w={"120px"} cursor={'pointer'} mt={5}>
             <Link to="/">
             Feedback Form
                 </Link>
                 </Text>
 
-                <Text w={"120px"} cursor={'pointer'}>
+                <Text w={"120px"} cursor={'pointer'} mt={5}>
                   <Link to="/submisssion">
                   All submission
                   </Link>
@@ -49,7 +56,7 @@ const Navbar = () => {
                   {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
                 </Button>
   
-                <Menu>
+                {/* <Menu>
                   <MenuButton
                     as={Button}
                     rounded={'full'}
@@ -61,7 +68,7 @@ const Navbar = () => {
                     />
                   </MenuButton>
                  
-                </Menu>
+                </Menu> */}
               </Stack>
             </Flex>
           </Flex>
