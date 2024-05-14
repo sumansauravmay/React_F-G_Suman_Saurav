@@ -13,8 +13,6 @@ import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 
 const Navbar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
-  const navigate = useNavigate();
-  const toast = useToast();
 
   return (
     <>
