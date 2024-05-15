@@ -56,6 +56,26 @@ export default function Feedback() {
         duration: 4000,
         isClosable: true,
       });
+    } else if (
+      inputData.name.includes(0) ||
+      inputData.name.includes(1) ||
+      inputData.name.includes(2) ||
+      inputData.name.includes(3) ||
+      inputData.name.includes(4) ||
+      inputData.name.includes(5) ||
+      inputData.name.includes(6) ||
+      inputData.name.includes(7) ||
+      inputData.name.includes(8) ||
+      inputData.name.includes(9)
+    ) {
+      toast({
+        position: "top",
+        title: "Name is wrong",
+        description: "Please put only ALPHABETICAL",
+        status: "warning",
+        duration: 4000,
+        isClosable: true,
+      });
     } else if (!regex.test(inputData.email)) {
       toast({
         position: "top",
