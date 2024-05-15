@@ -1,7 +1,5 @@
 
-// import './App.css';
 import Allroutes from "./Components/Allroutes";
-// import Feedback from "./Components/Feddback";
 import Navbar from "./Components/Navbar";
 
 
